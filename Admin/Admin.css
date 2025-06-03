@@ -1,0 +1,429 @@
+/* General Reset and Global Styles */
+* {
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    box-sizing: border-box; /* Set box-sizing to border-box for all elements */
+    font-family: Arial, sans-serif; /* Set default font family */
+}
+
+/* Body and background styles */
+body {
+    background: linear-gradient(rgba(85, 85, 85, 0.7), rgba(85, 85, 85, 0.7)), url("../pic/background.jpg"); /* Set background gradient and image */
+    background-size: cover; /* Cover the entire body with the background */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background fixed on scroll */
+    color: #000000; /* Set default text color */
+}
+
+/* Top bar styling */
+.top-bar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Dark background for the top bar */
+    color: white; /* White text color */
+    padding: 10px; /* Padding around the top bar */
+    font-size: 14px; /* Set font size */
+}
+
+.contact-info p {
+    margin: 0; /* Reset margin */
+    padding: 0 10px; /* Padding for horizontal spacing */
+    display: inline-block; /* Display inline with padding */
+}
+
+.social-media a {
+    color: white; /* White text color for social media links */
+    margin: 0 5px; /* Horizontal margin between links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Authentication links */
+.auth-links a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding around links */
+    background-color: red; /* Red background for authentication links */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Wrapper styling */
+.wrapper {
+    padding: 2%; /* Padding inside the wrapper */
+    width: 80%; /* Width of the wrapper */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    background-color: rgba(206, 206, 206, 0.9); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Text Center alignment */
+.text-center {
+    text-align: center; /* Center text */
+}
+
+/* Clearfix */
+.clearfix {
+    float: none; /* Remove float */
+    clear: both; /* Clear floats */
+}
+
+/* Main Content styling */
+.main-content {
+    background-color: #5f5f5f; /* Dark background for main content */
+    padding: 3% 0; /* Vertical padding */
+    border-radius: 10px; /* Rounded corners */
+    color: #020202; /* Dark text color */
+}
+
+/* Form element styles */
+.tbl-30 {
+    width: 50%; /* Set width of table */
+    margin: 0 auto; /* Center the table */
+}
+
+.tbl-30 td {
+    padding: 15px; /* Padding in table cells */
+    font-size: 16px; /* Font size for table text */
+    color: #212020; /* Dark text color for table cells */
+    vertical-align: middle; /* Vertically center cell content */
+    text-align: left; /* Left-align text in cells */
+}
+
+.tbl-30 td:first-child {
+    width: 35%; /* Width of the first column */
+    text-align: right; /* Right-align text in the first column */
+    padding-right: 15px; /* Right padding */
+}
+
+/* Input text fields and file upload */
+input[type="text"], input[type="file"] {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding inside inputs */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light grey border */
+    display: inline-block; /* Inline block for inputs */
+    vertical-align: middle; /* Align inputs vertically */
+}
+
+/* Radio buttons inline */
+input[type="radio"] {
+    margin-right: 5px; /* Right margin for spacing */
+    vertical-align: middle; /* Align radio buttons vertically */
+}
+
+/* Submit button styling */
+.btn-secondary {
+    background-color: #80e980; /* Green background for buttons */
+    color: rgb(243, 234, 234); /* White text color */
+    padding: 12px 20px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    display: inline-block; /* Display inline */
+    margin-left: 75%; /* Left margin */
+}
+
+
+.btn-secondary:hover {
+    background-color: #066606; /* Darker green on hover */
+}
+
+
+
+
+
+/* Footer styling */
+.footer {
+    background-color: #000000; /* Black background for footer */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center text in footer */
+    color: rgb(0, 0, 0); /* White text color */
+}
+
+/* Full-width table styling */
+.tbl-full {
+    width: 100%; /* Full width for tables */
+}
+
+table tr th {
+    border-bottom: 1px solid black; /* Bottom border for table headers */
+    padding: 1%; /* Padding inside header cells */
+    text-align: left; /* Left-align text in header cells */
+}
+
+table tr td {
+    padding: 1%; /* Padding inside table cells */
+}
+
+/* Header styling */
+header {
+    background-color: #1a1a1a; /* Dark background for header */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center text in header */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
+}
+
+header h1 {
+    margin: 0; /* Reset margin */
+}
+
+/* Navigation styling */
+nav .logo {
+    display: flex; /* Use flexbox for logo */
+    align-items: center; /* Center logo vertically */
+}
+
+nav .logo img {
+    height: 40px; /* Height of logo image */
+    margin-right: 10px; /* Right margin for spacing */
+}
+
+nav .logo span {
+    color: white; /* White text color for logo text */
+    font-size: 24px; /* Font size for logo text */
+    font-weight: bold; /* Bold text */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for navigation links */
+    justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Horizontal margin between links */
+}
+
+nav ul li a {
+    color: #ddd; /* Light grey text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Change color on hover */
+}
+
+/* Main content section */
+main {
+    padding: 40px; /* Padding inside main content */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for main content */
+}
+
+/* Provider information */
+.provider-info {
+    text-align: center; /* Center provider info */
+    margin-bottom: 30px; /* Bottom margin */
+}
+
+/* Services list table styling */
+.services-list {
+    margin: 0 auto; /* Center the services list */
+    max-width: 800px; /* Max width for the services list */
+}
+
+.services-list table {
+    width: 100%; /* Full width for services table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.services-list table th, .services-list table td {
+    border: 1px solid #ddd; /* Light grey border for table cells */
+    padding: 12px; /* Padding inside table cells */
+    text-align: left; /* Left-align text in cells */
+}
+
+.services-list table th {
+    background-color: #333; /* Dark background for header cells */
+    color: #fff; /* White text color for header cells */
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px; /* Padding inside buttons */
+    background-color: #333; /* Dark background for buttons */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed; /* Fixed position on screen */
+    z-index: 1; /* Ensure modal is on top */
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
+    width: 100%; /* Full width for modal */
+    height: 100%; /* Full height for modal */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fff; /* White background for modal content */
+    margin: 15% auto; /* Center modal vertically and horizontally */
+    padding: 20px; /* Padding inside modal content */
+    border: 1px solid #888; /* Border for modal content */
+    width: 400px; /* Fixed width for modal */
+    text-align: center; /* Center text in modal */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Close button for modal */
+.close {
+    color: #aaa; /* Light grey color for close button */
+    float: right; /* Align to the right */
+    font-size: 28px; /* Font size for close button */
+    font-weight: bold; /* Bold text for close button */
+}
+
+.close:hover, .close:focus {
+    color: black; /* Change color on hover/focus */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Error and Success messages */
+.error {
+    color: #f00; /* Red color for error messages */
+    font-weight: bold; /* Bold text for error messages */
+}
+
+.success {
+    color: green; /* Green color for success messages */
+    font-weight: bold; /* Bold text for success messages */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table.tbl-30 {
+        width: 100%; /* Full width for tables on smaller screens */
+    }
+    
+    input[type="text"], input[type="file"], input[type="radio"] {
+        width: 100%; /* Full width for inputs on smaller screens */
+    }
+
+    .btn-secondary {
+        width: 100%; /* Full width for buttons on smaller screens */
+        margin-left: 0; /* Reset left margin */
+    }
+}
+
+/* Button styles */
+.btn-primary, .btn-secondary, .btn-tertiary, .btn-primary2,.btn-update,.btn-Service {
+    padding: 10px 20px; /* Padding inside buttons */
+    width: 200px; /* Fixed width for buttons */
+    color: aliceblue; /* Light blue text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for buttons */
+    justify-content: center; /* Center button content */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn-primary {
+    background-color: #272726; /* Dark background for primary button */
+}
+
+.btn-primary:hover {
+    background-color: #000000; /* Darker background on hover */
+}
+.btn-Service {
+    background-color: #036305; /* Dark background for primary button */
+}
+
+.btn-Service:hover {
+    background-color: #012401; /* Darker green on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #011d01; /* Darker green for secondary button on hover */
+}
+.btn-update{
+    background-color: #7ff25f;
+
+}
+.btn-update:hover{
+    background-color: #239703;
+}
+
+
+.btn-tertiary {
+    background-color: #ff0101; /* Red background for tertiary button */
+}
+
+.btn-tertiary:hover {
+    background-color: #5a0b0b; /* Darker red on hover */
+}
+
+.btn-primary2 {
+    background-color: #115ccc; /* Blue background for primary2 button */
+}
+
+.btn-primary2:hover {
+    background-color: #130b5a; /* Darker blue on hover */
+}
+
+/* Button general hover */
+.btn:hover {
+    opacity: 0.82; /* Slightly fade button on hover */
+}
+
+.box {
+    width: 90%; /* Width of the box */
+    max-width: 450px; /* Max width for the box */
+    position: absolute; /* Position absolutely */
+    top: 50%; /* Align vertically to center */
+    left: 50%; /* Align horizontally to center */
+    transform: translate(-50%, -50%); /* Center the box */
+    background: #ffffff; /* White background for the box */
+    padding: 50px 60px 70px; /* Padding inside the box */
+    text-align: center; /* Center text inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for box */
+}
+
+/* Form-box styling */
+.form-box h1 {
+    font-size: 30px; /* Font size for heading */
+    margin-bottom: 40px; /* Bottom margin for spacing */
+    color: #000000; /* Dark text color for heading */
+    position: relative; /* Position relative for positioning elements */
+    font-weight: 600; /* Semi-bold text */
+    padding-bottom: 10px; /* Bottom padding */
+    border-bottom: 1px solid #000000; /* Bottom border */
+}
+
+.form-box form.field {
+    display: flex; /* Use flexbox for form layout */
+    margin-bottom: 10px; /* Bottom margin for spacing */
+    flex-direction: column; /* Column layout for form fields */
+}
+
+.form-box form .input input {
+    height: 40px; /* Set height for input fields */
+}
+
+.col-4{
+    width:30%;
+    background-color: rgb(104, 104, 104);
+    margin:2%;
+    padding:3%;
+    float:left;
+}
+
+
+
+
+
+

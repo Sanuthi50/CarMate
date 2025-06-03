@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Define root variables for colors and max width */
+:root {
+  --primary-color: #da042a;
+  --primary-color-dark: #c00427;
+  --secondary-color: #15151f;
+  --secondary-color-dark: #0a0b0f;
+  --text-light: #6b7280;
+  --extra-light: #f8f7fd;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+/* Reset default margins and paddings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container for sections with max width */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+/* Section headers and descriptions */
+.section__subheader {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: var(--secondary-color-dark);
+}
+
+.section__description {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* Button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* General image styling */
+img {
+  width: 100%;
+  display: flex;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+/* Remove underline from links */
+a {
+  text-decoration: none;
+}
+
+/* Reset list style */
+ul {
+  list-style: none;
+}
+
+/* Smooth scrolling for the page */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Set font for the body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header styling */
+.header {
+  padding-block: 5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Pic/2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation styles */
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+}
+
+.nav__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--secondary-color-dark);
+}
+
+.nav_menu_btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Navigation links styles */
+.nav__links {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--secondary-color);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav_menu_btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+}
+
+/* Provider Styles for messages */
+.error {
+  color: #f00; /* Red color for error messages */
+  font-weight: bold; /* Bold text for error messages */
+}
+
+.success {
+  color: green; /* Green color for success messages */
+  font-weight: bold; /* Bold text for success messages */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table.tbl-30 {
+    width: 100%; /* Full width for tables on smaller screens */
+  }
+
+  input[type="text"],
+  input[type="file"],
+  input[type="radio"] {
+    width: 100%; /* Full width for inputs on smaller screens */
+  }
+
+  .btn-secondary {
+    width: 100%; /* Full width for buttons on smaller screens */
+    margin-left: 0; /* Reset left margin */
+  }
+}
+
+/* Button styles for primary and secondary actions */
+.btn-primary,
+.btn-secondary,
+.btn-tertiary,
+.btn-primary2,
+.btn-update,
+.btn-Service {
+  padding: 10px 20px; /* Padding inside buttons */
+  width: 200px; /* Fixed width for buttons */
+  color: aliceblue; /* Light blue text color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text for buttons */
+  justify-content: center; /* Center button content */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.btn-primary {
+  background-color: #da042a; /* Dark background for primary button */
+}
+
+.btn-primary:hover {
+  background-color: #3b0202; /* Darker background on hover */
+}
+
+.btn-secondary:hover {
+  background-color: #011d01; /* Darker green for secondary button on hover */
+}
+
+.btn-update {
+  background-color: #7ff25f; /* Background color for update button */
+}
+
+.btn-update:hover {
+  background-color: #239703; /* Darker green on hover */
+}
+
+.btn-tertiary {
+  background-color: #ff0101; /* Red background for tertiary button */
+}
+
+.btn-tertiary:hover {
+  background-color: #5a0b0b; /* Darker red on hover */
+}
+
+.btn-primary2 {
+  background-color: #115ccc; /* Blue background for primary2 button */
+}
+
+.btn-primary2:hover {
+  background-color: #130b5a; /* Darker blue on hover */
+}
+.btn-service {
+  background-color: #5dd43c; /* Blue background for primary2 button */
+}
+
+.btn-service:hover {
+  background-color: #075a1f; /* Darker blue on hover */
+}
+
+/* General hover effect for buttons */
+.btn:hover {
+  opacity: 0.82; /* Slightly fade button on hover */
+}
+
+/* Box styling */
+.box {
+  width: 90%; /* Width of the box */
+  max-width: 450px; /* Max width for the box */
+  position: absolute; /* Position absolutely */
+  top: 50%; /* Align vertically to center */
+  left: 50%; /* Align horizontally to center */
+  transform: translate(-50%, -50%); /* Center the box */
+  background: #ffffff; /* White background for the box */
+  padding: 50px 60px 70px; /* Padding inside the box */
+  text-align: center; /* Center text inside the box */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for box */
+}
+
+/* Clearfix for floats */
+.clearfix {
+  float: none; /* Remove float */
+  clear: both; /* Clear floats */
+}
+
+/* Table styling for specific table */
+.tbl-30 {
+  width: 50%; /* Set width of table */
+  margin: 0 auto; /* Center the table */
+  table-layout: fixed; /* Fixed layout for equal column sizes */
+}
+
+.tbl-30 td {
+  padding: 15px; /* Padding in table cells */
+  font-size: 16px; /* Font size for table text */
+  color: #000000; /* Dark text color for table cells */
+  vertical-align: middle; /* Vertically center cell content */
+  text-align: center; /* Center text in cells */
+  width: 33.33%; /* Set a fixed width for each column (3 columns) */
+}
+
+.tbl-full {
+  width: 100%; /* Full width for tables */
+  table-layout: fixed; /* Fixed layout for equal column sizes */
+}
+
+/* Table header styles */
+table tr th {
+  background-color: #da042a;
+  padding: 1%; /* Padding inside header cells */
+  text-align: center; /* Center text in header cells */
+  width: 33.33%; /* Set a fixed width for each column in the header (3 columns) */
+}
+
+/* Table cell styles */
+table tr td {
+  padding: 1%; /* Padding inside table cells */
+}
+
+/* Input fields styles */
+input[type="text"],
+input[type="file"] {
+  width: 100%; /* Full width for inputs */
+  padding: 12px; /* Padding inside inputs */
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light grey*/
+  
+}
+/* Wrapper styling */
+.wrapper {
+  padding: 2%; /* Padding inside the wrapper */
+  width: 80%; /* Width of the wrapper */
+  margin: 0 auto; /* Center the wrapper horizontally */
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+/* Footer styling */
+.footer {
+  background-color: #000000; /* Black background for footer */
+  padding: 20px 0; /* Vertical padding */
+  text-align: center; /* Center text in footer */
+  color: rgb(0, 0, 0); /* White text color */
+}
+
+
+/*Service Home Section*/
+
+
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-white{
+  color: rgb(0, 0, 0);
+}
+
+a{
+  color: #000000;
+  text-decoration: none;
+}
+a:hover{
+
+  color: #747373;
+
+}
+
+
+
+h2{
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 2%;
+}
+h3{
+  font-size: 1.5rem;
+}
+.float-container{
+  position: relative;
+}
+.float-text{
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+}
+fieldset{
+  border: 1px solid  #000000;
+  margin: 5%;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+
+
+/* CSS for Food SEarch Section */
+
+.service-search{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.829),rgba(255, 255, 255, 0.829)),url("../Pic/background.jpg");
+
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 7% 0;
+}
+
+.service-search input[type="search"]{
+  width: 50%;
+  padding: 1%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* CSS for Categories */
+
+.categories{
+  padding: 4% 0;
+  background-color: #ffffff;
+}
+
+.box-3{
+  width: 28%;
+  float: left;
+  margin: 2%;
+}
+
+
+/* CSS for service Menu */
+.service-menu{
+  background-color:  #ffffff;
+  padding: 4% 0;
+}
+.service-menu-box{
+  width: 43%;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  background-color:  #ffffff;
+  border-radius: 15px;
+}
+
+.service-menu-img{
+  width: 20%;
+  float: left;
+}
+
+.service-menu-desc{
+  width: 70%;
+  float: left;
+  margin-left: 8%;
+}
+
+.service-price{
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+.service-detail{
+  font-size: 1rem;
+  color: #050505;
+}
+
+
+
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+  .logo{
+      width: 80%;
+      float: none;
+      margin: 1% auto;
+  }
+
+  .menu ul{
+      text-align: center;
+  }
+
+  .service-search input[type="search"]{
+      width: 90%;
+      padding: 2%;
+      margin-bottom: 3%;
+  }
+
+  .btn{
+      width: 91%;
+      padding: 2%;
+  }
+
+  .food-search{
+      padding: 10% 0;
+  }
+
+  .categories{
+      padding: 20% 0;
+  }
+  h2{
+      margin-bottom: 10%;
+  }
+  .box-3{
+      width: 100%;
+      margin: 4% auto;
+  }
+
+  .service-menu{
+      padding: 20% 0;
+  }
+
+  .service-menu-box{
+      width: 90%;
+      padding: 5%;
+      margin-bottom: 5%;
+  }
+  .social{
+      padding: 5% 0;
+  }
+  
+  .order{
+      width: 100%;
+  }
+}

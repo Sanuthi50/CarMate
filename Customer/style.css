@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Define root variables for colors and max width */
+:root {
+  --primary-color: #da042a;
+  --primary-color-dark: #c00427;
+  --secondary-color: #15151f;
+  --secondary-color-dark: #0a0b0f;
+  --text-light: #6b7280;
+  --extra-light: #f8f7fd;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+/* Reset default margins and paddings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container for sections with max width */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+/* Section headers and descriptions */
+.section__subheader {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: var(--secondary-color-dark);
+}
+
+.section__description {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* Button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* General image styling */
+img {
+  width: 100%;
+  display: flex;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+/* Remove underline from links */
+a {
+  text-decoration: none;
+}
+
+/* Reset list style */
+ul {
+  list-style: none;
+}
+
+/* Smooth scrolling for the page */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Set font for the body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header styling */
+.header {
+  padding-block: 5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Pic/2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation styles */
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+}
+
+.nav__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--secondary-color-dark);
+}
+
+.nav_menu_btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Navigation links styles */
+.nav__links {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--secondary-color);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+/* Clearfix for floats */
+.clearfix {
+  float: none; /* Remove float */
+  clear: both; /* Clear floats */
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav_menu_btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+}
+
+/* Provider Styles for messages */
+.error {
+  color: #f00; /* Red color for error messages */
+  font-weight: bold; /* Bold text for error messages */
+}
+
+.success {
+  color: green; /* Green color for success messages */
+  font-weight: bold; /* Bold text for success messages */
+}
+/* Reset some default browser styles */
+body, h1, h2, p, label {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Heading styles */
+.heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h1 {
+  color: #000000;
+}
+
+/* Main content styling */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Booking form styles */
+.booking-form {
+  margin-top: 20px;
+}
+
+.booking-form h2 {
+  margin-bottom: 20px;
+  color:  #da042a;
+}
+
+/* Label styling */
+label {
+  display: block; /* Makes labels take up full width */
+  margin-bottom: 5px; /* Spacing below labels */
+  font-weight: bold; /* Bold font for labels */
+  font-size: 14px; /* Font size for labels */
+  color: #000000; /* Color for labels */
+}
+
+/* Input fields and select styles */
+select, input[type="date"], input[type="time"], input[type="text"], input[type="tel"], button {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for comfort */
+  margin-bottom: 15px; /* Spacing between fields */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in width and height */
+  font-size: 14px; /* Font size for input fields */
+}
+
+/* Input field focus styles */
+input:focus, select:focus {
+  border-color: #da042a; /* Border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+button {
+  background-color:  #da042a; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Transition for background color */
+  font-size: 16px; /* Font size for button */
+}
+
+button:hover {
+  background-color: #da042a; /* Darker shade on hover */
+}
+
+
+/* Section Styles */
+#home,
+#services,
+#bookings,
+#contact {
+ 
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+#home h1,
+#services h2,
+#bookings h2,
+#contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: var(--secondary-color-dark);
+}
+
+#home p,
+#services p,
+#bookings p,
+#contact p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* My Bookings Section */
+#bookings {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bookings h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#booking-list {
+  list-style: none;
+  padding: 0;
+}
+
+#booking-list li {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#booking-list li strong {
+  color: #333;
+  display: inline-block;
+  width: 150px;
+}
+
+#booking-list li hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #eaeaea;
+}
+
+#booking-list li:hover {
+  background-color: #f1f1f1;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* image button*/
+.image-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 100px; /* Adjust size */
+  height: 70px;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-white{
+  color: rgb(0, 0, 0);
+}
+
+a{
+  color: #000000;
+  text-decoration: none;
+}
+a:hover{
+
+  color: #747373;
+
+}
+
+
+
+h2{
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 2%;
+}
+h3{
+  font-size: 1.5rem;
+  background-color: #eaeaea;
+}
+.float-container{
+  position: relative;
+}
+.float-text{
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+}
+fieldset{
+  border: 1px solid  #ffffff;
+  margin: 5%;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+
+
+
+/* CSS for Food SEarch Section */
+
+.service-search{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.829),rgba(255, 255, 255, 0.829)),url("../Pic/background.jpg");
+
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 7% 0;
+}
+
+.service-search input[type="search"]{
+  width: 50%;
+  padding: 1%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* CSS for Categories */
+
+.categories{
+  padding: 4% 0;
+  background-color: #ffffff;
+}
+
+.box-3{
+  width: 28%;
+  float: left;
+  margin: 2%;
+}
+
+
+/* CSS for service Menu */
+.service-menu{
+  background-color:  #ffffff;
+  padding: 4% 0;
+}
+.service-menu-box{
+  width: 43%;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  background-color:  #ffffff;
+  border-radius: 15px;
+}
+
+.service-menu-img{
+  width: 20%;
+  float: left;
+}
+
+.service-menu-desc{
+  width: 70%;
+  float: left;
+  margin-left: 8%;
+}
+
+.service-price{
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+.service-detail{
+  font-size: 1rem;
+  color: #050505;
+}
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+  .logo{
+      width: 80%;
+      float: none;
+      margin: 1% auto;
+  }
+
+  .menu ul{
+      text-align: center;
+  }
+
+  .service-search input[type="search"]{
+      width: 90%;
+      padding: 2%;
+      margin-bottom: 3%;
+  }
+
+  .btn{
+      width: 91%;
+      padding: 2%;
+  }
+
+  .food-search{
+      padding: 10% 0;
+  }
+
+  .categories{
+      padding: 20% 0;
+  }
+  h2{
+      margin-bottom: 10%;
+  }
+  .box-3{
+      width: 100%;
+      margin: 4% auto;
+  }
+
+  .service-menu{
+      padding: 20% 0;
+  }
+
+  .service-menu-box{
+      width: 90%;
+      padding: 5%;
+      margin-bottom: 5%;
+  }
+  .social{
+      padding: 5% 0;
+  }
+  
+  .order{
+      width: 100%;
+  }
+}
+
+
+
+
+/* Wrapper styling */
+.wrapper {
+  padding: 2%; /* Padding inside the wrapper */
+  width: 80%; /* Width of the wrapper */
+  margin: 0 auto; /* Center the wrapper horizontally */
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+/* Footer styling */
+.footer {
+  background-color: #000000; /* Black background for footer */
+  padding: 20px 0; /* Vertical padding */
+  text-align: center; /* Center text in footer */
+  color: rgb(0, 0, 0); /* White text color */
+}
+/*Service Home Section*/
+
+
+
